@@ -37,21 +37,13 @@ h2{
 	
 }
 //------------------------HEADER-------------------------
-.btn-start{
-	padding-top: 28px;
-	.btn-start__link{
-		padding: 15px 40px;
-		background-color: #29C639;
-		border-radius: 50px;
-		cursor: pointer;
-	}
-}
+
 
 .header{
 	background-color: #222;
 	color: #fff;
 	position: relative;
-	&::after{
+	 &::after{
 		content: "";
 		position: absolute;
 		bottom: 0;
@@ -61,12 +53,9 @@ h2{
 		background-image: url(../images/header-bg.svg);
 		background-repeat: no-repeat;		
 		z-index: 0;
-	}
+	} 
 }
-.header__wrapper{
-	
-	
-	.top-nav{
+.top-nav{
 		height: 80px;
 		display: flex;
 		justify-content: space-between;
@@ -95,6 +84,10 @@ h2{
 			border-radius: 50px;
 		}
 	}
+.header__wrapper{
+	
+	
+	
 	.header__info{
 		margin-top: 160px;
 		display: flex;
@@ -105,7 +98,7 @@ h2{
 			&::before{
 				content: "";
 				position: absolute;
-				z-index: 10;
+				z-index: 0;
 				width: 943px;
 				height: 587px;
 				top: -200px;
@@ -123,7 +116,22 @@ h2{
 			.offer{
 				padding-top: 20px;
 			}
-			
+			.btn-start{
+				padding-top: 28px;
+				position: relative;
+				margin-bottom: 70px;
+				.btn-start__link{
+					padding: 15px 40px;
+					background-color: #29C639;
+					border-radius: 50px;
+					position: absolute;
+					z-index: 2;
+					transition: all 0.3s;
+					&:hover{
+						background-color: #1D8B34;
+					}
+				}
+			}
 			.info__socials{
 				margin-top: 20px;
 				width: 250px;
@@ -131,6 +139,8 @@ h2{
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				position: absolute;
+				z-index: 2;
 			}
 		}
 		.info__image{
@@ -209,6 +219,20 @@ h2{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	.btn-start{
+		padding-top: 28px;
+		
+		margin-bottom: 70px;
+		.btn-start__link{
+			padding: 15px 40px;
+			background-color: #29C639;
+			border-radius: 50px;
+			transition: all 0.3s;
+			&:hover{
+						background-color: #1D8B34;
+					}
+		}
+	}
 }
 .info__block{
 	padding-left: 20px;
@@ -218,7 +242,7 @@ h2{
 	background-color: #f2f2f2;	
 	padding-bottom: 100px;
 	position: relative;
-	z-index: -1;
+	z-index: 0; 
 
 	.tarif__container{
 		position: relative;
@@ -234,7 +258,7 @@ h2{
 			background-repeat: no-repeat;		
 			z-index: -1;
 		}
-	}
+	} 
 	
 	h2{
 		text-align: center;
@@ -252,7 +276,7 @@ h2{
 	padding: 25px;
 	cursor: pointer;
 	transition: all 0.3s;
-	//opacity: 0;
+	
 	.item__name{
 		font-size: 36px;
 		font-weight: 800;
@@ -280,13 +304,20 @@ h2{
 	}
 	.item__btn{
 		padding-top: 70px;
-		.btn-start__link{
+		
+		.btn__link{
 			padding: 15px 80px;
 			background-color: #29C639;
 			border-radius: 50px;
 			cursor: pointer;
+			transition: all 0.3s;
+			&:hover{
+				background-color: #1D8B34;
+					}
 		}
 	}
+	
+
 	&:hover{
 		background-color: #4a4a4a;
 		.item__name,.item__text, .item__text2{
@@ -295,5 +326,50 @@ h2{
 		.item__number, .item__number2{
 			color: #29C639;
 		}
+	} 
+}
+//-------------------------Subscribe-----------------
+.subscribe{
+	background-color: #222222;
+	color: #fff;
+	padding-bottom: 100px;
+	padding-top: 70px;
+	h2{
+		text-align: center;
 	}
+	text-align: center;
+}
+.subscribe__text{
+	max-width: 640px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 60px;
+}
+.subscribe__form{
+	
+	.subscribe__input{
+		width: 350px;
+		border: none;
+		border-radius: 50px;
+		background-color: #fff;
+		padding: 15px 20px;
+	}
+	.subscribe__btn{
+		width: 200px;
+		padding: 15px 20px;
+		border: none;
+		border-radius: 50px;
+		background-color: #29C639;
+		color: #fff;
+		margin-left: -90px;
+		cursor: pointer;
+		transition: all 0.3s;
+			&:hover{
+						background-color: #1D8B34;
+					}
+	}
+}
+//----------------------Footer----------------------------
+.footer{
+	background-color: #222;
 }
